@@ -3,6 +3,11 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+*::selection {
+  color: #1c1c1c;
+  background-color: #fff;
+}
+
 *,
 *::before,
 *::after {
@@ -10,10 +15,14 @@
 }
 
 body {
+  display: flex;
+  min-height: 100vh;
+  width: 100%;
+  position: relative;
+  margin: 0;
   color: #fff;
   background-color: #1c1c1c;
-  margin: 0;
-  padding: 20px 40px;
+  font-family: "Ubuntu", "Anek Telugu", "Open Sans";
 }
 
 a {
