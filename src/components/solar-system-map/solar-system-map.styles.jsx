@@ -1,13 +1,11 @@
 import styled from "styled-components";
 
 export const SolarSystemOverlay = styled.svg`
-  width: 90vw;
-  height: 90vh;
+  width: 100%;
+  height: 100%;
   position: absolute;
   margin-left: auto;
   margin-right: auto;
-  left: 0;
-  right: 0;
   z-index: 1;
 
   .orbit-map {
