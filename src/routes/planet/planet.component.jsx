@@ -1,6 +1,8 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router";
 
+import LoadingIcon from "../../components/loading-icon/loading-icon.component";
+
 import apiroute from "../../utils/planetdata.utils";
 
 import { Wrapper, InfoContainer } from "./planet.styles";
@@ -8,14 +10,16 @@ import { Wrapper, InfoContainer } from "./planet.styles";
 const Planet = () => {
   let { planet } = useParams();
 
+  const [loading, setLoading] = useState(false);
   const [currentPlanetData, setCurrentPlanetData] = useState("");
 
   const fetchPlanetData = async () => {
     try {
       const response = await fetch(apiroute);
       const data = await response.json();
-      const singlePlanetData = data.data.planets[`${planet}`];
-      setCurrentPlanetData(singlePlanetData);
+      const currentPlanetData = data.data.planets[`${planet}`];
+      setCurrentPlanetData(currentPlanetData);
+      setLoading(true);
     } catch (error) {
       console.log(`Error: ${error}`);
     }
@@ -37,9 +41,9 @@ const Planet = () => {
     funfact,
   } = currentPlanetData;
 
-  if (currentPlanetData) {
-    return (
-      <Wrapper>
+  return (
+    <Wrapper>
+      {loading ? (
         <InfoContainer>
           <p>{name}</p>
           <p>{type}</p>
@@ -48,18 +52,18 @@ const Planet = () => {
           <p>Day Length: {daylength}</p>
           <p>Orbital Period: {orbit}</p>
           <p>Number of Moons: {moons}</p>
-          <p>Distance from the Sun: {distancefromsun}</p>
+          {planet === "sun" ? (
+            <p>Distance from Galaxy Center: {distancefromsun}</p>
+          ) : (
+            <p>Distance from the Sun: {distancefromsun}</p>
+          )}
           <p>Fun Fact: {funfact}</p>
         </InfoContainer>
-      </Wrapper>
-    );
-  } else {
-    return (
-      <Wrapper>
-        <p>Loading...</p>
-      </Wrapper>
-    );
-  }
+      ) : (
+        <LoadingIcon />
+      )}
+    </Wrapper>
+  );
 };
 
 export default Planet;

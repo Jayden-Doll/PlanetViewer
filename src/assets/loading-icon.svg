@@ -1,0 +1,18 @@
+<svg width="76" height="76" viewBox="0 0 76 76" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="loading" clip-path="url(#clip0_1_2)">
+<circle id="center-circle" cx="37.7221" cy="38.2779" r="8" transform="rotate(90 37.7221 38.2779)" fill="white"/>
+<g id="inner-circle">
+<circle id="Ellipse 2" cx="37.7221" cy="38.2779" r="18.1778" transform="rotate(69.5747 37.7221 38.2779)" stroke="white"/>
+<circle id="Ellipse 4" r="3.38044" transform="matrix(-4.37114e-08 1 1 4.37114e-08 19.5232 36.3911)" fill="white"/>
+</g>
+<g id="outer-circle">
+<circle id="Ellipse 3" cx="37.7221" cy="38.2779" r="32.071" transform="rotate(69.5747 37.7221 38.2779)" stroke="white"/>
+<circle id="Ellipse 5" cx="66.8408" cy="27.5499" r="5.06815" transform="rotate(90 66.8408 27.5499)" fill="white"/>
+</g>
+</g>
+<defs>
+<clipPath id="clip0_1_2">
+<rect width="76" height="76" fill="white" transform="translate(76 1.90735e-06) rotate(90)"/>
+</clipPath>
+</defs>
+</svg>
