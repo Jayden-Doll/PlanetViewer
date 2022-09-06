@@ -35,7 +35,7 @@ export const SelectContainer = styled.div`
   margin: 0;
   display: flex;
   align-items: center;
-  gap: 0.6rem;
+  gap: 0.3rem;
   font-size: 1rem;
 
   :hover {

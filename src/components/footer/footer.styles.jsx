@@ -1,4 +1,5 @@
 import styled from "styled-components";
+
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 export const FooterContainer = styled.footer`
@@ -23,6 +24,7 @@ export const SocialMediaIcon = styled(FontAwesomeIcon)`
   font-size: 1.2rem;
   padding: 0.4rem;
   transition: 0.2s ease;
+  color: #bababa;
   :hover {
     cursor: pointer;
     color: #fff;
@@ -32,3 +34,5 @@ export const SocialMediaIcon = styled(FontAwesomeIcon)`
 export const CopyrightText = styled.small`
   margin: 0 0.2rem;
 `;
+
+export const IconLink = styled.a``;
