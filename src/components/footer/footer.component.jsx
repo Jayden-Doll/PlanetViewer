@@ -20,6 +20,7 @@ const Footer = () => {
     <FooterContainer>
       <FooterContent>
         <IconLink
+          aria-label="github"
           href="https://github.com/Jayden-Doll"
           target="_blank"
           rel="noreferer noopener"
@@ -27,6 +28,7 @@ const Footer = () => {
           <SocialMediaIcon icon={faGithub} />
         </IconLink>
         <IconLink
+          aria-label="linkedin"
           href="https://www.linkedin.com/in/jayden-doll/"
           target="_blank"
           rel="noreferer noopener"
@@ -35,6 +37,7 @@ const Footer = () => {
         </IconLink>
         <CopyrightText> ©2022 Jayden Doll </CopyrightText>
         <IconLink
+          aria-label="twitter"
           href="https://twitter.com/Jayden_Doll"
           target="_blank"
           rel="noreferer noopener"
@@ -42,6 +45,7 @@ const Footer = () => {
           <SocialMediaIcon icon={faTwitter} />
         </IconLink>
         <IconLink
+          aria-label="instagram"
           href="https://www.instagram.com/jaydoll_codes/"
           target="_blank"
           rel="noreferer noopener"

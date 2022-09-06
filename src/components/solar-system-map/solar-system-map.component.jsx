@@ -26,7 +26,7 @@ const SolarSystemMap = () => {
               stroke="#545454"
               strokeWidth="0.5"
             />
-            <Link to="/planet/pluto">
+            <Link aria-label="pluto" to="/planet/pluto">
               <circle
                 className="planet"
                 id="pluto"
@@ -48,7 +48,7 @@ const SolarSystemMap = () => {
               stroke="#545454"
               strokeWidth="0.5"
             />
-            <Link to="/planet/neptune">
+            <Link aria-label="neptune" to="/planet/neptune">
               <path
                 className="planet"
                 id="neptune"
@@ -68,7 +68,7 @@ const SolarSystemMap = () => {
               stroke="#545454"
               strokeWidth="0.5"
             />
-            <Link to="/planet/uranus">
+            <Link aria-label="uranus" to="/planet/uranus">
               <circle
                 className="planet"
                 id="uranus"
@@ -90,7 +90,7 @@ const SolarSystemMap = () => {
               stroke="#545454"
               strokeWidth="0.5"
             />
-            <Link to="/planet/saturn">
+            <Link aria-label="saturn" to="/planet/saturn">
               <path
                 className="planet"
                 id="saturn"
@@ -110,7 +110,7 @@ const SolarSystemMap = () => {
               stroke="#545454"
               strokeWidth="0.5"
             />
-            <Link to="/planet/jupiter">
+            <Link aria-label="jupiter" to="/planet/jupiter">
               <circle
                 className="planet"
                 id="jupiter"
@@ -132,7 +132,7 @@ const SolarSystemMap = () => {
               stroke="#545454"
               strokeWidth="0.5"
             />
-            <Link to="/planet/mars">
+            <Link aria-label="mars" to="/planet/mars">
               <path
                 className="planet"
                 id="mars"
@@ -143,7 +143,7 @@ const SolarSystemMap = () => {
           </g>
           <g id="ring-earth">
             <g id="ring-moon">
-              <Link to="/planet/moon">
+              <Link aria-label="the moon" to="/planet/moon">
                 <circle
                   className="planet"
                   id="moon"
@@ -164,7 +164,7 @@ const SolarSystemMap = () => {
               stroke="#545454"
               strokeWidth="0.5"
             />
-            <Link to="/planet/earth">
+            <Link aria-label="earth" to="/planet/earth">
               <circle
                 className="planet"
                 id="earth"
@@ -186,7 +186,7 @@ const SolarSystemMap = () => {
               stroke="#545454"
               strokeWidth="0.5"
             />
-            <Link to="/planet/venus">
+            <Link aria-label="venus" to="/planet/venus">
               <circle
                 className="planet"
                 id="venus"
@@ -208,7 +208,7 @@ const SolarSystemMap = () => {
               stroke="#545454"
               strokeWidth="0.5"
             />
-            <Link to="/planet/mercury">
+            <Link aria-label="mercury" to="/planet/mercury">
               <circle
                 className="planet"
                 id="mercury"
@@ -219,7 +219,7 @@ const SolarSystemMap = () => {
               />
             </Link>
           </g>
-          <Link to="/planet/sun">
+          <Link aria-label="sun" to="/planet/sun">
             <path
               className="planet"
               id="sun"
