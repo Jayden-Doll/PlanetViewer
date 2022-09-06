@@ -3,7 +3,7 @@ import { useParams } from "react-router";
 
 import apiroute from "../../utils/planetdata.utils";
 
-import { Title, Subtitle } from "./planet.styles";
+import { Wrapper, InfoContainer } from "./planet.styles";
 
 const Planet = () => {
   let { planet } = useParams();
@@ -25,20 +25,39 @@ const Planet = () => {
     fetchPlanetData();
   }, []);
 
-  const { name, type } = currentPlanetData;
+  const {
+    name,
+    type,
+    description,
+    temperature,
+    daylength,
+    orbit,
+    moons,
+    distancefromsun,
+    funfact,
+  } = currentPlanetData;
 
   if (currentPlanetData) {
     return (
-      <div>
-        <Title>{name}</Title>
-        <Subtitle>{type}</Subtitle>
-      </div>
+      <Wrapper>
+        <InfoContainer>
+          <p>{name}</p>
+          <p>{type}</p>
+          <p>{description}</p>
+          <p>Average Temperature: {temperature}</p>
+          <p>Day Length: {daylength}</p>
+          <p>Orbital Period: {orbit}</p>
+          <p>Number of Moons: {moons}</p>
+          <p>Distance from the Sun: {distancefromsun}</p>
+          <p>Fun Fact: {funfact}</p>
+        </InfoContainer>
+      </Wrapper>
     );
   } else {
     return (
-      <div>
-        <Title>Loading...</Title>
-      </div>
+      <Wrapper>
+        <p>Loading...</p>
+      </Wrapper>
     );
   }
 };

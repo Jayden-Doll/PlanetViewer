@@ -1,12 +1,20 @@
 import styled from "styled-components";
 
-export const Title = styled.h1`
-  margin: 5rem 0 0 2.5rem;
+export const Wrapper = styled.div`
+  width: 100vw;
+  height: calc(100vh - 7rem);
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 3.5rem 0;
 `;
 
-export const Subtitle = styled.h1`
-  font-size: 1.5rem;
-  font-weight: normal;
-  font-family: "Anek Telugu";
-  margin: 0rem 2.5rem;
+export const InfoContainer = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: column;
+  max-width: 38ch;
+  text-align: left;
 `;

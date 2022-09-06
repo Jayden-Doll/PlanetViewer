@@ -36,3 +36,10 @@ export const CopyrightText = styled.small`
 `;
 
 export const IconLink = styled.a``;
+
+export const Line = styled.div`
+  height: 0.5px;
+  width: 1rem;
+  margin: 0rem 0.4rem;
+  background-color: #787878;
+`;

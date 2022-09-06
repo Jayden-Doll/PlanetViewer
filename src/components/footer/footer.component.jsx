@@ -1,5 +1,3 @@
-import { Link } from "react-router-dom";
-
 import {
   faGithub,
   faLinkedin,
@@ -13,12 +11,14 @@ import {
   SocialMediaIcon,
   IconLink,
   CopyrightText,
+  Line,
 } from "./footer.styles";
 
 const Footer = () => {
   return (
     <FooterContainer>
       <FooterContent>
+        <Line />
         <IconLink
           aria-label="github"
           href="https://github.com/Jayden-Doll"
@@ -52,6 +52,7 @@ const Footer = () => {
         >
           <SocialMediaIcon icon={faInstagram} />
         </IconLink>
+        <Line />
       </FooterContent>
     </FooterContainer>
   );
