@@ -5,7 +5,16 @@ import LoadingIcon from "../../components/loading-icon/loading-icon.component";
 
 import apiroute from "../../utils/planetdata.utils";
 
-import { Wrapper, InfoContainer } from "./planet.styles";
+import { planets } from "../../utils/splineplanet.utils";
+
+import {
+  Wrapper,
+  InfoContainer,
+  PlanetContainer,
+  SplinePlanet,
+  SubInfoContainer,
+  InfoItem,
+} from "./planet.styles";
 
 const Planet = () => {
   let { planet } = useParams();
@@ -27,6 +36,7 @@ const Planet = () => {
 
   useEffect(() => {
     fetchPlanetData();
+    // eslint-disable-next-line
   }, []);
 
   const {
@@ -44,21 +54,48 @@ const Planet = () => {
   return (
     <Wrapper>
       {loading ? (
-        <InfoContainer>
-          <p>{name}</p>
-          <p>{type}</p>
-          <p>{description}</p>
-          <p>Average Temperature: {temperature}</p>
-          <p>Day Length: {daylength}</p>
-          <p>Orbital Period: {orbit}</p>
-          <p>Number of Moons: {moons}</p>
-          {planet === "sun" ? (
-            <p>Distance from Galaxy Center: {distancefromsun}</p>
-          ) : (
-            <p>Distance from the Sun: {distancefromsun}</p>
-          )}
-          <p>Fun Fact: {funfact}</p>
-        </InfoContainer>
+        <>
+          <InfoContainer>
+            <p>{name}</p>
+            <p>{type}</p>
+            <p>{description}</p>
+            <SubInfoContainer>
+              <InfoItem>
+                <span>Average Temperature</span>
+                <span>{temperature}</span>
+              </InfoItem>
+              <InfoItem>
+                <span>Day Length</span>
+                <span>{daylength}</span>
+              </InfoItem>
+              <InfoItem>
+                <span>Orbital Period</span>
+                <span>{orbit}</span>
+              </InfoItem>
+              <InfoItem>
+                <span>Number of Moons</span>
+                <span>{moons}</span>
+              </InfoItem>
+              <InfoItem>
+                {planet === "sun" ? (
+                  <>
+                    <span>Distance from Galaxy Center</span>
+                    <span>{distancefromsun}</span>
+                  </>
+                ) : (
+                  <>
+                    <span>Distance from the Sun</span>
+                    <span>{distancefromsun}</span>
+                  </>
+                )}
+              </InfoItem>
+            </SubInfoContainer>
+            <p>Fun Fact: {funfact}</p>
+          </InfoContainer>
+          <PlanetContainer>
+            <SplinePlanet scene={`${planets[planet]}`} />
+          </PlanetContainer>
+        </>
       ) : (
         <LoadingIcon />
       )}
