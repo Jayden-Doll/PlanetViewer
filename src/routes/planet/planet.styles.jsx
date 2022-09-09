@@ -3,9 +3,8 @@ import Spline from "@splinetool/react-spline";
 import { Link } from "react-router-dom";
 
 export const Wrapper = styled.div`
-  position: relative;
   width: 100vw;
-  height: 100%;
+  min-height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -13,17 +12,15 @@ export const Wrapper = styled.div`
 `;
 
 export const Container = styled.div`
-  position: relative;
   width: 100vw;
   height: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 20rem;
+  padding: 2rem 0;
 `;
 
 export const InfoContainer = styled.div`
-  position: absolute;
   display: flex;
   align-items: flex-start;
   flex-direction: column;

@@ -19,21 +19,30 @@ body {
   min-height: 100vh;
 }
 
-body::-webkit-scrollbar {
-  display: none;
-}
-
 body {
-  -ms-overflow-style: none;
-  scrollbar-width: none;
+  position: relative;
+
   display: flex;
   width: 100vw;
-  position: relative;
   margin: 0;
   color: #fff;
   background-color: #1c1c1c;
   font-family: "Ubuntu", "Anek Telugu", "Open Sans";
   overflow-x: hidden;
+}
+
+body::-webkit-scrollbar {
+  width: 0.5rem;
+}
+
+body::-webkit-scrollbar-track {
+  background-color: black;
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: rgb(255, 255, 255); /* color of the scroll thumb */
+  border-radius: 5px; /* roundness of the scroll thumb */
+  border: 3px solid #ffffff; /* creates padding around scroll thumb */
 }
 
 a {
