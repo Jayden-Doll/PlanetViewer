@@ -18,7 +18,7 @@ export const Container = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: 25% 0;
+  padding: 22% 0;
 `;
 
 export const InfoContainer = styled.div`
@@ -26,7 +26,7 @@ export const InfoContainer = styled.div`
   display: flex;
   align-items: flex-start;
   flex-direction: column;
-  max-width: 41ch;
+  max-width: 48ch;
   text-align: left;
   height: auto;
   margin-right: 50%;
