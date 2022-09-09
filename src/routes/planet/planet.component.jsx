@@ -14,6 +14,12 @@ import {
   SplinePlanet,
   SubInfoContainer,
   InfoItem,
+  PlanetTitle,
+  PlanetType,
+  PlanetCopyText,
+  PlanetInfoType,
+  PlanetInfoData,
+  Container,
 } from "./planet.styles";
 
 const Planet = () => {
@@ -53,52 +59,58 @@ const Planet = () => {
 
   return (
     <Wrapper>
-      {loading ? (
-        <>
-          <InfoContainer>
-            <p>{name}</p>
-            <p>{type}</p>
-            <p>{description}</p>
-            <SubInfoContainer>
-              <InfoItem>
-                <span>Average Temperature</span>
-                <span>{temperature}</span>
-              </InfoItem>
-              <InfoItem>
-                <span>Day Length</span>
-                <span>{daylength}</span>
-              </InfoItem>
-              <InfoItem>
-                <span>Orbital Period</span>
-                <span>{orbit}</span>
-              </InfoItem>
-              <InfoItem>
-                <span>Number of Moons</span>
-                <span>{moons}</span>
-              </InfoItem>
-              <InfoItem>
-                {planet === "sun" ? (
-                  <>
-                    <span>Distance from Galaxy Center</span>
-                    <span>{distancefromsun}</span>
-                  </>
-                ) : (
-                  <>
-                    <span>Distance from the Sun</span>
-                    <span>{distancefromsun}</span>
-                  </>
-                )}
-              </InfoItem>
-            </SubInfoContainer>
-            <p>Fun Fact: {funfact}</p>
-          </InfoContainer>
-          <PlanetContainer>
-            <SplinePlanet scene={`${planets[planet]}`} />
-          </PlanetContainer>
-        </>
-      ) : (
-        <LoadingIcon />
-      )}
+      <Container>
+        {loading ? (
+          <>
+            <InfoContainer>
+              <PlanetTitle>{name}</PlanetTitle>
+              <PlanetType>{type}</PlanetType>
+              <PlanetCopyText>{description}</PlanetCopyText>
+              <SubInfoContainer>
+                <InfoItem>
+                  <PlanetInfoType>Average Temperature</PlanetInfoType>
+                  <PlanetInfoData>{temperature}</PlanetInfoData>
+                </InfoItem>
+                <InfoItem>
+                  <PlanetInfoType>Day Length</PlanetInfoType>
+                  <PlanetInfoData>{daylength}</PlanetInfoData>
+                </InfoItem>
+                <InfoItem>
+                  <PlanetInfoType>Orbital Period</PlanetInfoType>
+                  <PlanetInfoData>{orbit}</PlanetInfoData>
+                </InfoItem>
+                <InfoItem>
+                  <PlanetInfoType>Number of Moons</PlanetInfoType>
+                  <PlanetInfoData>{moons}</PlanetInfoData>
+                </InfoItem>
+                <InfoItem>
+                  {planet === "sun" ? (
+                    <>
+                      <PlanetInfoType>
+                        Distance from Galaxy Center
+                      </PlanetInfoType>
+                      <PlanetInfoData>{distancefromsun}</PlanetInfoData>
+                    </>
+                  ) : (
+                    <>
+                      <PlanetInfoType>Distance from the Sun</PlanetInfoType>
+                      <PlanetInfoData>{distancefromsun}</PlanetInfoData>
+                    </>
+                  )}
+                </InfoItem>
+              </SubInfoContainer>
+              <PlanetCopyText>
+                <PlanetInfoType>Fun Fact:</PlanetInfoType> {funfact}
+              </PlanetCopyText>
+            </InfoContainer>
+            <PlanetContainer>
+              <SplinePlanet scene={`${planets[planet]}`} />
+            </PlanetContainer>
+          </>
+        ) : (
+          <LoadingIcon />
+        )}
+      </Container>
     </Wrapper>
   );
 };

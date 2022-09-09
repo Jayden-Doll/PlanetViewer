@@ -13,7 +13,7 @@ export const NavContainer = styled.header`
   border-bottom: 1px solid #fff;
   background-color: #1c1c1c;
   padding: 0 2rem;
-  z-index: 1;
+  z-index: 2;
 `;
 
 export const NavLogo = styled.a`

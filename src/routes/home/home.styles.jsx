@@ -68,6 +68,44 @@ export const SolarSystem = styled(SolarSystemDiagram)`
       transform: rotateZ(0deg);
     }
   }
+
+  @-moz-document url-prefix() {
+    #ring-mercury {
+      transform-box: view-box;
+    }
+
+    #ring-venus {
+      transform-box: view-box;
+    }
+
+    #ring-earth {
+      transform-box: view-box;
+    }
+
+    #ring-mars {
+      transform-box: view-box;
+    }
+
+    #ring-jupiter {
+      transform-box: view-box;
+    }
+
+    #ring-saturn {
+      transform-box: view-box;
+    }
+
+    #ring-uranus {
+      transform-box: view-box;
+    }
+
+    #ring-neptune {
+      transform-box: view-box;
+    }
+
+    #ring-pluto {
+      transform-box: view-box;
+    }
+  }
 `;
 
 export const HomeWrapper = styled.div`
@@ -85,6 +123,6 @@ export const SolarSystemContainer = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  width: auto;
+  width: 100%;
   height: 100%;
 `;

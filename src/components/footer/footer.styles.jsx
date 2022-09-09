@@ -11,6 +11,7 @@ export const FooterContainer = styled.footer`
   height: 3.5rem;
   border-top: 0.5px solid #fff;
   background-color: #1c1c1c;
+  z-index: 2;
 `;
 
 export const FooterContent = styled.div`

@@ -1,11 +1,9 @@
 import styled from "styled-components";
 
 export const SolarSystemOverlay = styled.svg`
-  width: 100%;
-  height: auto;
   position: absolute;
-  margin-left: auto;
-  margin-right: auto;
+  width: 100%;
+  height: 95%;
   z-index: 1;
 
   .orbit-map {
@@ -84,6 +82,44 @@ export const SolarSystemOverlay = styled.svg`
     }
     to {
       transform: rotateZ(0deg);
+    }
+  }
+
+  @-moz-document url-prefix() {
+    #ring-mercury {
+      transform-box: view-box;
+    }
+
+    #ring-venus {
+      transform-box: view-box;
+    }
+
+    #ring-earth {
+      transform-box: view-box;
+    }
+
+    #ring-mars {
+      transform-box: view-box;
+    }
+
+    #ring-jupiter {
+      transform-box: view-box;
+    }
+
+    #ring-saturn {
+      transform-box: view-box;
+    }
+
+    #ring-uranus {
+      transform-box: view-box;
+    }
+
+    #ring-neptune {
+      transform-box: view-box;
+    }
+
+    #ring-pluto {
+      transform-box: view-box;
     }
   }
 `;
