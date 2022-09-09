@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 import { faCaretDown } from "@fortawesome/free-solid-svg-icons";
 
 import {
@@ -6,12 +8,15 @@ import {
   SelectContainer,
   MenuArrowIcon,
   SelectText,
+  LinkContainer,
 } from "./navbar.styles";
 
 const Navbar = () => {
   return (
     <NavContainer>
-      <NavLogo href="/">PlanetViewer</NavLogo>
+      <LinkContainer as={Link} to="/">
+        <NavLogo>PlanetViewer</NavLogo>
+      </LinkContainer>
       <SelectContainer>
         <MenuArrowIcon icon={faCaretDown} />
         <SelectText>Select Planet</SelectText>

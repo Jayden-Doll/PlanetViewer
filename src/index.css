@@ -19,7 +19,13 @@ body {
   min-height: 100vh;
 }
 
+body::-webkit-scrollbar {
+  display: none;
+}
+
 body {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
   display: flex;
   width: 100vw;
   position: relative;

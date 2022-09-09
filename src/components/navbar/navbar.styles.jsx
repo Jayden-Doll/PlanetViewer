@@ -17,15 +17,20 @@ export const NavContainer = styled.header`
   z-index: 2;
 `;
 
-export const NavLogo = styled.a`
+export const LinkContainer = styled.div`
+  width: auto;
+  height: auto;
+  padding: 1rem 1.5rem;
+`;
+
+export const NavLogo = styled.p`
   font-size: 1.5rem;
   color: #fff;
+  margin: 0 auto;
 
   user-select: none;
   -webkit-user-select: none;
   -moz-user-select: none;
-
-  padding: 1rem 0;
 
   :hover {
     cursor: pointer;

@@ -19,7 +19,7 @@ export const Container = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 20rem 0;
+  padding: 20rem;
 `;
 
 export const InfoContainer = styled.div`
