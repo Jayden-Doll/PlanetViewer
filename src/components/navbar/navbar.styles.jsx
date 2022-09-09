@@ -8,6 +8,7 @@ export const NavContainer = styled.header`
   align-items: center;
   position: absolute;
   top: 0;
+  right: 0;
   min-width: 100%;
   height: 3.5rem;
   border-bottom: 1px solid #fff;

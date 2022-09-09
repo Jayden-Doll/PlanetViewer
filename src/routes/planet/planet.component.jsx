@@ -1,5 +1,7 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faArrowLeft } from "@fortawesome/free-solid-svg-icons";
 
 import LoadingIcon from "../../components/loading-icon/loading-icon.component";
 
@@ -20,6 +22,7 @@ import {
   PlanetInfoType,
   PlanetInfoData,
   Container,
+  BackButton,
 } from "./planet.styles";
 
 const Planet = () => {
@@ -102,7 +105,12 @@ const Planet = () => {
               <PlanetCopyText>
                 <PlanetInfoType>Fun Fact:</PlanetInfoType> {funfact}
               </PlanetCopyText>
+              <BackButton to="/">
+                <FontAwesomeIcon icon={faArrowLeft} />
+                Back To Home
+              </BackButton>
             </InfoContainer>
+            <FontAwesomeIcon />
             <PlanetContainer>
               <SplinePlanet scene={`${planets[planet]}`} />
             </PlanetContainer>

@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import Spline from "@splinetool/react-spline";
+import { Link } from "react-router-dom";
 
 export const Wrapper = styled.div`
   position: relative;
@@ -18,7 +19,7 @@ export const Container = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 22% 0;
+  padding: 20rem 0;
 `;
 
 export const InfoContainer = styled.div`
@@ -74,7 +75,7 @@ export const PlanetTitle = styled.h1`
   text-transform: uppercase;
   font-family: "Ubuntu";
   font-weight: bold;
-  margin-bottom: 0rem;
+  margin: 0;
 `;
 export const PlanetType = styled.p`
   font-size: 1.2rem;
@@ -89,3 +90,25 @@ export const PlanetInfoType = styled.span`
   text-align: center;
 `;
 export const PlanetInfoData = styled.p``;
+
+export const BackButton = styled(Link)`
+  font-family: "Ubuntu";
+  font-weight: bold;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 0.5rem 0.6rem;
+  font-size: 1rem;
+  gap: 0.5rem;
+  border-radius: 0.4rem;
+  border: none;
+  background-color: #d4d4d4;
+  color: #1c1c1c;
+  transition: 0.1s ease;
+  cursor: pointer;
+  margin-top: 0.5rem;
+
+  :hover {
+    background-color: #fff;
+  }
+`;
