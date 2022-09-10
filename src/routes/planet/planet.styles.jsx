@@ -73,7 +73,9 @@ export const PlanetTitle = styled.h1`
   font-family: "Ubuntu";
   font-weight: bold;
   margin: 0;
+  ${({ planetAccent }) => `color: #${planetAccent} !important`};
 `;
+
 export const PlanetType = styled.p`
   font-size: 1.2rem;
   margin-top: 0;
@@ -85,8 +87,11 @@ export const PlanetCopyText = styled.p`
 export const PlanetInfoType = styled.span`
   font-size: 1.1rem;
   text-align: center;
+  ${({ planetAccent }) => `color: #${planetAccent} !important`};
 `;
-export const PlanetInfoData = styled.p``;
+export const PlanetInfoData = styled.p`
+  ${({ planetAccent }) => `color: #${planetAccent} !important`};
+`;
 
 export const BackButton = styled(Link)`
   font-family: "Ubuntu";

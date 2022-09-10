@@ -1,13 +1,15 @@
-import { useEffect, useState } from "react";
+import { useEffect, useState, useContext } from "react";
 import { useParams } from "react-router";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowLeft } from "@fortawesome/free-solid-svg-icons";
 
 import LoadingIcon from "../../components/loading-icon/loading-icon.component";
 
-import apiroute from "../../utils/planetdata.utils";
+import { PlanetContext } from "../../contexts/planet.context";
 
-import { planets } from "../../utils/splineplanet.utils";
+import apiroute from "../../utils/planetData.utils";
+import planetColor from "../../utils/planetAccent.utils";
+import { planets } from "../../utils/splinePlanet.utils";
 
 import {
   Wrapper,
@@ -26,7 +28,8 @@ import {
 } from "./planet.styles";
 
 const Planet = () => {
-  let { planet } = useParams();
+  let { planet: PlanetName } = useParams();
+  const { planetAccent, setPlanetAccent } = useContext(PlanetContext);
 
   const [loading, setLoading] = useState(false);
   const [currentPlanetData, setCurrentPlanetData] = useState("");
@@ -35,8 +38,10 @@ const Planet = () => {
     try {
       const response = await fetch(apiroute);
       const data = await response.json();
-      const currentPlanetData = data.data.planets[`${planet}`];
+      const currentPlanetData = data.data.planets[`${PlanetName}`];
       setCurrentPlanetData(currentPlanetData);
+      setPlanetAccent(planetColor[`${PlanetName}`]);
+      console.log(planetAccent);
       setLoading(true);
     } catch (error) {
       console.log(`Error: ${error}`);
@@ -66,44 +71,59 @@ const Planet = () => {
         {loading ? (
           <>
             <InfoContainer>
-              <PlanetTitle>{name}</PlanetTitle>
+              <PlanetTitle planetAccent={planetAccent}>{name}</PlanetTitle>
               <PlanetType>{type}</PlanetType>
               <PlanetCopyText>{description}</PlanetCopyText>
               <SubInfoContainer>
                 <InfoItem>
                   <PlanetInfoType>Average Temperature</PlanetInfoType>
-                  <PlanetInfoData>{temperature}</PlanetInfoData>
+                  <PlanetInfoData planetAccent={planetAccent}>
+                    {temperature}
+                  </PlanetInfoData>
                 </InfoItem>
                 <InfoItem>
                   <PlanetInfoType>Day Length</PlanetInfoType>
-                  <PlanetInfoData>{daylength}</PlanetInfoData>
+                  <PlanetInfoData planetAccent={planetAccent}>
+                    {daylength}
+                  </PlanetInfoData>
                 </InfoItem>
                 <InfoItem>
                   <PlanetInfoType>Orbital Period</PlanetInfoType>
-                  <PlanetInfoData>{orbit}</PlanetInfoData>
+                  <PlanetInfoData planetAccent={planetAccent}>
+                    {orbit}
+                  </PlanetInfoData>
                 </InfoItem>
                 <InfoItem>
                   <PlanetInfoType>Number of Moons</PlanetInfoType>
-                  <PlanetInfoData>{moons}</PlanetInfoData>
+                  <PlanetInfoData planetAccent={planetAccent}>
+                    {moons}
+                  </PlanetInfoData>
                 </InfoItem>
                 <InfoItem>
-                  {planet === "sun" ? (
+                  {PlanetName === "sun" ? (
                     <>
                       <PlanetInfoType>
                         Distance from Galaxy Center
                       </PlanetInfoType>
-                      <PlanetInfoData>{distancefromsun}</PlanetInfoData>
+                      <PlanetInfoData planetAccent={planetAccent}>
+                        {distancefromsun}
+                      </PlanetInfoData>
                     </>
                   ) : (
                     <>
                       <PlanetInfoType>Distance from the Sun</PlanetInfoType>
-                      <PlanetInfoData>{distancefromsun}</PlanetInfoData>
+                      <PlanetInfoData planetAccent={planetAccent}>
+                        {distancefromsun}
+                      </PlanetInfoData>
                     </>
                   )}
                 </InfoItem>
               </SubInfoContainer>
               <PlanetCopyText>
-                <PlanetInfoType>Fun Fact:</PlanetInfoType> {funfact}
+                <PlanetInfoType planetAccent={planetAccent}>
+                  Fun Fact:
+                </PlanetInfoType>{" "}
+                {funfact}
               </PlanetCopyText>
               <BackButton to="/">
                 <FontAwesomeIcon icon={faArrowLeft} />
@@ -112,7 +132,7 @@ const Planet = () => {
             </InfoContainer>
             <FontAwesomeIcon />
             <PlanetContainer>
-              <SplinePlanet scene={`${planets[planet]}`} />
+              <SplinePlanet scene={`${planets[PlanetName]}`} />
             </PlanetContainer>
           </>
         ) : (
