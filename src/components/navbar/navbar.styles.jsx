@@ -43,6 +43,7 @@ export const SelectContainer = styled.div`
   align-items: center;
   gap: 0.3rem;
   font-size: 1rem;
+  width: 10rem;
 
   :hover {
     cursor: pointer;

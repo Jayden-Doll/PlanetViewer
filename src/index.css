@@ -16,7 +16,43 @@
 
 html,
 body {
+  font-size: 10px;
   min-height: 100vh;
+}
+
+@media (min-width: 1000px) {
+  html,
+  body {
+    font-size: 14px;
+  }
+}
+
+@media (min-width: 1400px) {
+  html,
+  body {
+    font-size: 18px;
+  }
+}
+
+@media (min-width: 2400px) {
+  html,
+  body {
+    font-size: 25px;
+  }
+}
+
+@media (min-width: 3400px) {
+  html,
+  body {
+    font-size: 35px;
+  }
+}
+
+@media (min-width: 4000px) {
+  html,
+  body {
+    font-size: 40px;
+  }
 }
 
 body {

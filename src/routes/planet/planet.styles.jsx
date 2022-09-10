@@ -104,6 +104,7 @@ export const BackButton = styled(Link)`
   transition: 0.1s ease;
   cursor: pointer;
   margin-top: 0.5rem;
+  white-space: nowrap;
 
   :hover {
     background-color: #fff;
