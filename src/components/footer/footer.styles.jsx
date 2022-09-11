@@ -13,6 +13,8 @@ export const FooterContainer = styled.footer`
     `border-top: 0.5px solid #${planetAccent} !important`};
   background-color: #1c1c1c;
   z-index: 2;
+  transition: 0.3s ease;
+  transition-delay: 0.2s;
 `;
 
 export const FooterContent = styled.div`
@@ -36,6 +38,8 @@ export const SocialMediaIcon = styled(FontAwesomeIcon)`
 export const CopyrightText = styled.small`
   ${({ planetAccent }) => `color: #${planetAccent} !important`};
   margin: 0 0.2rem;
+  transition: 0.3s ease;
+  transition-delay: 0.2s;
 `;
 
 export const IconLink = styled.a``;

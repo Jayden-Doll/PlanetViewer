@@ -41,8 +41,7 @@ const Footer = () => {
           <SocialMediaIcon icon={faLinkedin} />
         </IconLink>
         <CopyrightText planetAccent={planetAccent}>
-          {" "}
-          ©2022 Jayden Doll{" "}
+          ©2022 Jayden Doll
         </CopyrightText>
         <IconLink
           aria-label="twitter"

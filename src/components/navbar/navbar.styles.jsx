@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const NavContainer = styled.header`
+export const NavContainer = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -14,6 +14,8 @@ export const NavContainer = styled.header`
     `border-bottom: 1px solid #${planetAccent} !important`};
   background-color: #1c1c1c;
   z-index: 2;
+  transition: 0.3s ease;
+  transition-delay: 0.2s;
 `;
 
 export const LinkContainer = styled.div`

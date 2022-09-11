@@ -2,6 +2,8 @@ import { useEffect, useContext } from "react";
 import { PlanetContext } from "../../contexts/planet.context";
 import SolarSystemMap from "../../components/solar-system-map/solar-system-map.component";
 
+import AnimatedPage from "../../components/animatedpage.component";
+
 import { SolarSystem, SolarSystemContainer, HomeWrapper } from "./home.styles";
 
 const Home = () => {
@@ -13,12 +15,14 @@ const Home = () => {
   }, []);
 
   return (
-    <HomeWrapper>
-      <SolarSystemContainer>
-        <SolarSystemMap />
-        <SolarSystem />
-      </SolarSystemContainer>
-    </HomeWrapper>
+    <AnimatedPage>
+      <HomeWrapper>
+        <SolarSystemContainer>
+          <SolarSystemMap />
+          <SolarSystem />
+        </SolarSystemContainer>
+      </HomeWrapper>
+    </AnimatedPage>
   );
 };
 

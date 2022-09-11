@@ -1,6 +1,7 @@
 import styled from "styled-components";
 import Spline from "@splinetool/react-spline";
 import { Link } from "react-router-dom";
+import { motion } from "framer-motion";
 
 export const Wrapper = styled.div`
   width: 100vw;
@@ -20,7 +21,7 @@ export const Container = styled.div`
   padding: 2rem 0;
 `;
 
-export const InfoContainer = styled.div`
+export const InfoContainer = styled(motion.div)`
   display: flex;
   align-items: flex-start;
   flex-direction: column;
@@ -39,7 +40,7 @@ export const InfoContainer = styled.div`
   }
 `;
 
-export const PlanetContainer = styled.div`
+export const PlanetContainer = styled(motion.div)`
   position: absolute;
   bottom: 0;
   right: 0;
