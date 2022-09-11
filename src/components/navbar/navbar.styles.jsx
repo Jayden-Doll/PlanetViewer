@@ -10,6 +10,8 @@ export const NavContainer = styled.header`
   min-width: 100%;
   height: 3.5rem;
   border-bottom: 1px solid #fff;
+  ${({ planetAccent }) =>
+    `border-bottom: 1px solid #${planetAccent} !important`};
   background-color: #1c1c1c;
   z-index: 2;
 `;

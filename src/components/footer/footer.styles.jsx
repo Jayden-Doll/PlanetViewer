@@ -9,7 +9,8 @@ export const FooterContainer = styled.footer`
   bottom: 0;
   min-width: 100%;
   height: 3.5rem;
-  border-top: 0.5px solid #fff;
+  ${({ planetAccent }) =>
+    `border-top: 0.5px solid #${planetAccent} !important`};
   background-color: #1c1c1c;
   z-index: 2;
 `;
@@ -33,6 +34,7 @@ export const SocialMediaIcon = styled(FontAwesomeIcon)`
 `;
 
 export const CopyrightText = styled.small`
+  ${({ planetAccent }) => `color: #${planetAccent} !important`};
   margin: 0 0.2rem;
 `;
 

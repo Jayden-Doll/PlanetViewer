@@ -1,3 +1,6 @@
+import { useContext } from "react";
+import { PlanetContext } from "../../contexts/planet.context";
+
 import {
   faGithub,
   faLinkedin,
@@ -15,8 +18,10 @@ import {
 } from "./footer.styles";
 
 const Footer = () => {
+  const { planetAccent } = useContext(PlanetContext);
+
   return (
-    <FooterContainer>
+    <FooterContainer planetAccent={planetAccent}>
       <FooterContent>
         <Line />
         <IconLink
@@ -35,7 +40,10 @@ const Footer = () => {
         >
           <SocialMediaIcon icon={faLinkedin} />
         </IconLink>
-        <CopyrightText> ©2022 Jayden Doll </CopyrightText>
+        <CopyrightText planetAccent={planetAccent}>
+          {" "}
+          ©2022 Jayden Doll{" "}
+        </CopyrightText>
         <IconLink
           aria-label="twitter"
           href="https://twitter.com/Jayden_Doll"
