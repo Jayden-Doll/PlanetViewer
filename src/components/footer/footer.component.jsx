@@ -1,6 +1,7 @@
 import { useContext } from "react";
 import { PlanetContext } from "../../contexts/planet.context";
 
+import { library } from "@fortawesome/fontawesome-svg-core";
 import {
   faGithub,
   faLinkedin,
@@ -18,6 +19,8 @@ import {
 } from "./footer.styles";
 
 const Footer = () => {
+  library.add(faGithub, faInstagram, faLinkedin, faTwitter);
+
   const { planetAccent } = useContext(PlanetContext);
 
   return (

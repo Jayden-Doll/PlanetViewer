@@ -30,9 +30,8 @@ import {
 } from "./planet.styles";
 
 const Planet = () => {
-  const { planetAccent, setPlanetAccent } = useContext(PlanetContext);
   let { planet: PlanetName } = useParams();
-  setPlanetAccent(planetColor[`${PlanetName}`]);
+  const { planetAccent, setPlanetAccent } = useContext(PlanetContext);
 
   const [loading, setLoading] = useState(false);
   const [currentPlanetData, setCurrentPlanetData] = useState("");
@@ -50,6 +49,7 @@ const Planet = () => {
   };
   useEffect(() => {
     fetchPlanetData();
+    setPlanetAccent(planetColor[`${PlanetName}`]);
     // eslint-disable-next-line
   }, []);
 
