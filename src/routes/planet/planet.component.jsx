@@ -7,7 +7,7 @@ import LoadingIcon from "../../components/loading-icon/loading-icon.component";
 
 import { PlanetContext } from "../../contexts/planet.context";
 
-import apiroute from "../../utils/planetData.utils";
+import apiRoute from "../../utils/planetData.utils";
 import planetColor from "../../utils/planetAccent.utils";
 import { planets } from "../../utils/splinePlanet.utils";
 
@@ -36,7 +36,7 @@ const Planet = () => {
 
   const fetchPlanetData = async () => {
     try {
-      const response = await fetch(apiroute);
+      const response = await fetch(apiRoute);
       const data = await response.json();
       const currentPlanetData = data.data.planets[`${PlanetName}`];
       setCurrentPlanetData(currentPlanetData);

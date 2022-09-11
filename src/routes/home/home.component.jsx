@@ -9,6 +9,7 @@ const Home = () => {
 
   useEffect(() => {
     setPlanetAccent("fff");
+    // eslint-disable-next-line
   }, []);
 
   return (
