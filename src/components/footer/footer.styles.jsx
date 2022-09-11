@@ -9,8 +9,8 @@ export const FooterContainer = styled.footer`
   bottom: 0;
   min-width: 100%;
   height: 3.5rem;
-  ${({ planetAccent }) =>
-    `border-top: 0.5px solid #${planetAccent} !important`};
+  border-top: 0.5px solid #fff;
+  ${({ planetAccent }) => `border-top: 0.5px solid #${planetAccent} `};
   background-color: #1c1c1c;
   z-index: 2;
   transition: 0.3s ease;
@@ -21,7 +21,6 @@ export const FooterContent = styled.div`
   display: flex;
   align-items: center;
   flex-direction: row;
-  color: #bababa;
 `;
 
 export const SocialMediaIcon = styled(FontAwesomeIcon)`
@@ -36,7 +35,7 @@ export const SocialMediaIcon = styled(FontAwesomeIcon)`
 `;
 
 export const CopyrightText = styled.small`
-  ${({ planetAccent }) => `color: #${planetAccent} !important`};
+  ${({ planetAccent }) => `color: #${planetAccent}`};
   margin: 0 0.2rem;
   transition: 0.3s ease;
   transition-delay: 0.2s;
