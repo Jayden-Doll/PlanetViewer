@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const MenuItemsContainer = styled.div`
-  width: 100%;
+  width: auto;
   height: auto;
   display: flex;
   flex-direction: column;
@@ -14,9 +14,12 @@ export const ItemContainer = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  width: auto;
   display: flex;
-  margin: 0 auto;
+
+  :hover {
+    background-color: #262626;
+    cursor: pointer;
+  }
 `;
 
 export const MenuItem = styled.div`
@@ -25,13 +28,8 @@ export const MenuItem = styled.div`
   justify-content: center;
   align-items: center;
   gap: 1rem;
-  padding: 1rem 0;
+  padding: 1.5rem 0;
   color: #fff;
-
-  :hover {
-    background-color: #262626;
-    cursor: pointer;
-  }
 `;
 
 export const Icon = styled.img`

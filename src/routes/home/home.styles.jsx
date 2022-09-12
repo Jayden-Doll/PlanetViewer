@@ -115,7 +115,11 @@ export const HomeWrapper = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: 3.5rem 0;
+  margin: 7rem 0;
+
+  @media (max-width: 480px) {
+    height: auto;
+  }
 `;
 
 export const SolarSystemContainer = styled.div`
