@@ -27,7 +27,7 @@ export const FooterContent = styled.div`
 export const SocialMediaIcon = styled(FontAwesomeIcon)`
   font-size: 1.2rem;
   @media (max-width: 480px) {
-    font-size: 1.5rem;
+    font-size: 1.6rem;
   }
   padding: 0.4rem;
   transition: 0.2s ease;

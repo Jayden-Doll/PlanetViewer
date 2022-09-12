@@ -117,7 +117,7 @@ export const PlanetCopyText = styled.p`
 
   @media (max-width: 480px) {
     ${PlanetInfoType} {
-      font-size: 1.4rem;
+      font-size: 1.1rem;
     }
   }
 `;
