@@ -116,6 +116,11 @@ export const HomeWrapper = styled.div`
   justify-content: center;
   align-items: center;
   margin: 3.5rem 0;
+
+  @media (max-width: 580px) {
+    height: auto;
+    padding: 3.5rem 0;
+  }
 `;
 
 export const SolarSystemContainer = styled.div`

@@ -37,7 +37,7 @@ export const NavLogo = styled.p`
     cursor: pointer;
   }
 
-  @media (max-width: 480px) {
+  @media (max-width: 580px) {
     font-size: 2rem;
   }
 `;

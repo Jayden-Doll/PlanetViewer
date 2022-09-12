@@ -115,7 +115,7 @@ export const PlanetCopyText = styled.p`
   font-family: "Anek Telugu";
   font-size: 1.1rem;
 
-  @media (max-width: 480px) {
+  @media (max-width: 580px) {
     ${PlanetInfoType} {
       font-size: 1.1rem;
     }
