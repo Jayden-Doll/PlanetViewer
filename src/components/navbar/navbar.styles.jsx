@@ -36,4 +36,8 @@ export const NavLogo = styled.p`
   :hover {
     cursor: pointer;
   }
+
+  @media (max-width: 480px) {
+    font-size: 2rem;
+  }
 `;

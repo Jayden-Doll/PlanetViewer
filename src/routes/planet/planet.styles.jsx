@@ -104,14 +104,24 @@ export const PlanetType = styled.p`
   margin-top: 0;
   margin-bottom: 0.5rem;
 `;
-export const PlanetCopyText = styled.p`
-  font-family: "Anek Telugu";
-`;
+
 export const PlanetInfoType = styled.span`
   font-size: 1.1rem;
   text-align: center;
   ${({ planetAccent }) => `color: #${planetAccent} !important`};
 `;
+
+export const PlanetCopyText = styled.p`
+  font-family: "Anek Telugu";
+  font-size: 1.1rem;
+
+  @media (max-width: 480px) {
+    ${PlanetInfoType} {
+      font-size: 1.4rem;
+    }
+  }
+`;
+
 export const PlanetInfoData = styled.p`
   font-size: 1.2rem;
   ${({ planetAccent }) => `color: #${planetAccent} !important`};

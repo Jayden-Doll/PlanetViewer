@@ -137,7 +137,7 @@ const Planet = () => {
                 </SubInfoContainer>
                 <PlanetCopyText>
                   <PlanetInfoType planetAccent={planetAccent}>
-                    Fun Fact:
+                    Fun Fact:&nbsp;
                   </PlanetInfoType>
                   {funfact}
                 </PlanetCopyText>

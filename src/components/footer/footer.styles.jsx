@@ -26,6 +26,9 @@ export const FooterContent = styled.div`
 
 export const SocialMediaIcon = styled(FontAwesomeIcon)`
   font-size: 1.2rem;
+  @media (max-width: 480px) {
+    font-size: 1.5rem;
+  }
   padding: 0.4rem;
   transition: 0.2s ease;
   color: #bababa;
@@ -40,6 +43,9 @@ export const CopyrightText = styled.small`
   margin: 0 0.2rem;
   transition: 0.3s ease;
   transition-delay: 0.2s;
+  @media (max-width: 480px) {
+    font-size: 1.2rem;
+  }
 `;
 
 export const IconLink = styled.a``;
