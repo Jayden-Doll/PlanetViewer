@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 export const MenuContainer = styled.div`
   width: 80%;
-  height: auto;
+  min-height: 100;
   display: flex;
   justify-content: center;
   align-items: center;
