@@ -35,8 +35,11 @@ export const InfoContainer = styled(motion.div)`
     margin-right: 25%;
   }
 
-  @media (max-width: 595px) {
+  @media (max-width: 440px) {
+    padding: 0 5% 20% 5%;
+    min-height: auto;
     margin-right: 0;
+    font-size: 1.3rem;
   }
 `;
 
@@ -50,6 +53,25 @@ export const PlanetContainer = styled(motion.div)`
 `;
 
 export const SplinePlanet = styled(Spline)``;
+
+export const PlanetImageMobile = styled.img`
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 70%;
+  height: auto;
+
+  @media (max-width: 440px) {
+    width: 80%;
+  }
+  @media (max-width: 280px) {
+    width: 100%;
+  }
+`;
+
+export const MobileTitle = styled.h1`
+  padding-top: 5rem;
+`;
 
 export const SubInfoContainer = styled.div`
   font-family: "Anek Telugu";
@@ -91,6 +113,7 @@ export const PlanetInfoType = styled.span`
   ${({ planetAccent }) => `color: #${planetAccent} !important`};
 `;
 export const PlanetInfoData = styled.p`
+  font-size: 1.2rem;
   ${({ planetAccent }) => `color: #${planetAccent} !important`};
 `;
 

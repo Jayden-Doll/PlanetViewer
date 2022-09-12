@@ -7,9 +7,10 @@ import LoadingIcon from "../../components/loading-icon/loading-icon.component";
 
 import { PlanetContext } from "../../contexts/planet.context";
 
-import AnimatedPage from "../../components/animatedpage.component";
+import AnimatedPage from "../../components/animated-page/animatedpage.component";
 
 import apiRoute from "../../utils/planetData.utils";
+import { planetImages } from "../../utils/planetImages.utils";
 import planetColor from "../../utils/planetAccent.utils";
 import { planets } from "../../utils/splinePlanet.utils";
 
@@ -27,10 +28,17 @@ import {
   PlanetInfoData,
   Container,
   BackButton,
+  PlanetImageMobile,
 } from "./planet.styles";
 
 const Planet = () => {
-  let { planet: PlanetName } = useParams();
+  const [isMobile, setMobile] = useState(window.innerWidth < 650);
+
+  const updateMedia = () => {
+    setMobile(window.innerWidth < 650);
+  };
+
+  let { planet: planetName } = useParams();
   const { planetAccent, setPlanetAccent } = useContext(PlanetContext);
 
   const [loading, setLoading] = useState(false);
@@ -40,7 +48,7 @@ const Planet = () => {
     try {
       const response = await fetch(apiRoute);
       const data = await response.json();
-      const currentPlanetData = data.data.planets[`${PlanetName}`];
+      const currentPlanetData = data.data.planets[`${planetName}`];
       setCurrentPlanetData(currentPlanetData);
       setLoading(true);
     } catch (error) {
@@ -49,7 +57,10 @@ const Planet = () => {
   };
   useEffect(() => {
     fetchPlanetData();
-    setPlanetAccent(planetColor[`${PlanetName}`]);
+    setPlanetAccent(planetColor[`${planetName}`]);
+
+    window.addEventListener("resize", updateMedia);
+    return () => window.removeEventListener("resize", updateMedia);
     // eslint-disable-next-line
   }, []);
 
@@ -105,7 +116,7 @@ const Planet = () => {
                     </PlanetInfoData>
                   </InfoItem>
                   <InfoItem>
-                    {PlanetName === "sun" ? (
+                    {planetName === "sun" ? (
                       <>
                         <PlanetInfoType>
                           Distance from Galaxy Center
@@ -127,7 +138,7 @@ const Planet = () => {
                 <PlanetCopyText>
                   <PlanetInfoType planetAccent={planetAccent}>
                     Fun Fact:
-                  </PlanetInfoType>{" "}
+                  </PlanetInfoType>
                   {funfact}
                 </PlanetCopyText>
                 <BackButton to="/">
@@ -141,7 +152,14 @@ const Planet = () => {
                 animate={{ opacity: 1, x: 0 }}
                 exit={{ opacity: 0, x: 100 }}
               >
-                <SplinePlanet scene={`${planets[PlanetName]}`} />
+                {isMobile ? (
+                  <PlanetImageMobile
+                    src={planetImages[planetName]}
+                    alt={planetName}
+                  />
+                ) : (
+                  <SplinePlanet scene={`${planets[planetName]}`} />
+                )}
               </PlanetContainer>
             </>
           ) : (
