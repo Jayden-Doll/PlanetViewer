@@ -6,7 +6,7 @@ export const NavContainer = styled.div`
   align-items: center;
 
   min-width: 100%;
-  height: 3.5rem;
+  height: 3rem;
 
   position: absolute;
   top: 0;
@@ -37,7 +37,7 @@ export const LinkContainer = styled.div`
 export const NavLogo = styled.p`
   margin: 0 auto;
 
-  font-size: 1.5rem;
+  font-size: 1.4rem;
   color: #fff;
 
   user-select: none;

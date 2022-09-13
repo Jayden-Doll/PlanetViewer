@@ -6,7 +6,7 @@ export const FooterContainer = styled.footer`
   justify-content: center;
 
   min-width: 100%;
-  height: 3.5rem;
+  height: 3rem;
 
   position: absolute;
   bottom: 0;
@@ -43,7 +43,7 @@ export const Line = styled.div`
 export const SocialMediaIcon = styled(FontAwesomeIcon)`
   padding: 0.4rem;
 
-  font-size: 1.2rem;
+  font-size: 1.4rem;
 
   color: #bababa;
 
@@ -65,6 +65,8 @@ export const CopyrightText = styled.small`
   margin: 0 0.2rem;
 
   ${({ planetAccent }) => `color: #${planetAccent} !important`};
+
+  font-size: 1.2rem;
 
   transition: 0.3s ease;
   transition-delay: 0.2s;

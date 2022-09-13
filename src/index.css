@@ -60,7 +60,7 @@ body::-webkit-scrollbar-thumb {
   background-color: rgb(255, 255, 255); /* color of the scroll thumb */
 }
 
-@media (min-width: 1000px) {
+@media (min-width: 581px) {
   html,
   body {
     font-size: 14px;
