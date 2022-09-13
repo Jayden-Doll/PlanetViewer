@@ -2,7 +2,7 @@
 
 Welcome to PlanetViewer, a simple, yet interactive way to learn amazing facts about the planets in our solar system!
 
-[🌎 Check it out here!](https://planet-viewer3d.netlify.app/)
+<a href="https://planet-viewer3d.netlify.app/" target="_blank">🌎 Check it out here!</a>
 
 ---
 
