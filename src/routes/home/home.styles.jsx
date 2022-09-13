@@ -2,7 +2,44 @@ import styled from "styled-components";
 
 import { ReactComponent as SolarSystemDiagram } from "../../assets/solar-system.svg";
 
+export const HomeWrapper = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 100vw;
+  height: calc(100vh - 7rem);
+
+  margin: 3.5rem 0;
+
+  @media (max-width: 580px) {
+    height: auto;
+
+    padding: 3.5rem 0;
+  }
+`;
+
+export const SolarSystemContainer = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 100%;
+  height: 100%;
+
+  position: relative;
+`;
+
 export const SolarSystem = styled(SolarSystemDiagram)`
+  @keyframes orbit {
+    from {
+      transform: rotateZ(360deg);
+    }
+    to {
+      transform: rotateZ(0deg);
+    }
+  }
+
   width: 100%;
   height: 95%;
 
@@ -60,15 +97,6 @@ export const SolarSystem = styled(SolarSystemDiagram)`
     transform-box: fill-box;
   }
 
-  @keyframes orbit {
-    from {
-      transform: rotateZ(360deg);
-    }
-    to {
-      transform: rotateZ(0deg);
-    }
-  }
-
   @-moz-document url-prefix() {
     #ring-mercury {
       transform-box: view-box;
@@ -106,28 +134,4 @@ export const SolarSystem = styled(SolarSystemDiagram)`
       transform-box: view-box;
     }
   }
-`;
-
-export const HomeWrapper = styled.div`
-  width: 100vw;
-  height: calc(100vh - 7rem);
-  margin: 0 auto;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin: 3.5rem 0;
-
-  @media (max-width: 580px) {
-    height: auto;
-    padding: 3.5rem 0;
-  }
-`;
-
-export const SolarSystemContainer = styled.div`
-  position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  height: 100%;
 `;

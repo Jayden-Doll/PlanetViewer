@@ -1,11 +1,11 @@
 import { Routes, Route, useLocation } from "react-router-dom";
-
-import Navbar from "./components/navbar/navbar.component";
-import Footer from "./components/footer/footer.component";
+import { AnimatePresence } from "framer-motion";
 
 import Home from "./routes/home/home.component";
 import Planet from "./routes/planet/planet.component";
-import { AnimatePresence } from "framer-motion";
+
+import Navbar from "./components/navbar/navbar.component";
+import Footer from "./components/footer/footer.component";
 
 function App() {
   const location = useLocation();

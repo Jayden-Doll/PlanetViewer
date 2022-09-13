@@ -1,9 +1,19 @@
 import styled from "styled-components";
 
 export const SolarSystemOverlay = styled.svg`
-  position: absolute;
+  @keyframes orbit {
+    from {
+      transform: rotateZ(360deg);
+    }
+    to {
+      transform: rotateZ(0deg);
+    }
+  }
+
   width: 100%;
   height: 95%;
+
+  position: absolute;
   z-index: 1;
 
   .orbit-map {
@@ -11,13 +21,15 @@ export const SolarSystemOverlay = styled.svg`
   }
 
   .planet {
-    transition: stroke 0.1s ease;
     stroke: transparent;
     fill: transparent;
     rx: 100%;
 
+    transition: stroke 0.1s ease;
+
     :hover {
       cursor: pointer;
+
       stroke: rgba(255, 255, 255, 0.8);
     }
   }
@@ -74,15 +86,6 @@ export const SolarSystemOverlay = styled.svg`
     animation: orbit 370s linear infinite;
     transform-origin: center;
     transform-box: fill-box;
-  }
-
-  @keyframes orbit {
-    from {
-      transform: rotateZ(360deg);
-    }
-    to {
-      transform: rotateZ(0deg);
-    }
   }
 
   @-moz-document url-prefix() {

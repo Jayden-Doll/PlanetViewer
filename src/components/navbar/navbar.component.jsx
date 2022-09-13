@@ -1,6 +1,8 @@
 import { useContext } from "react";
-import { PlanetContext } from "../../contexts/planet.context";
 import { Link } from "react-router-dom";
+
+import { PlanetContext } from "../../contexts/planet.context";
+
 import { NavContainer, NavLogo, LinkContainer } from "./navbar.styles";
 
 const Navbar = () => {

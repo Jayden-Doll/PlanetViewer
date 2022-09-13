@@ -4,8 +4,8 @@
 }
 
 *::selection {
-  color: #1c1c1c;
   background-color: #fff;
+  color: #1c1c1c;
 }
 
 *,
@@ -14,14 +14,50 @@
   box-sizing: border-box;
 }
 
+a {
+  text-decoration: none;
+}
+
 html {
   scroll-behavior: smooth;
 }
 
 html,
 body {
-  font-size: 10px;
   min-height: 100vh;
+
+  font-size: 10px;
+}
+
+body {
+  display: flex;
+
+  width: 100vw;
+
+  position: relative;
+
+  margin: 0;
+  overflow-x: hidden;
+
+  background-color: #1c1c1c;
+  color: #fff;
+
+  font-family: "Ubuntu", "Anek Telugu", "Open Sans";
+}
+
+body::-webkit-scrollbar {
+  width: 0.5rem;
+}
+
+body::-webkit-scrollbar-track {
+  background-color: black;
+}
+
+body::-webkit-scrollbar-thumb {
+  border-radius: 5px; /* roundness of the scroll thumb */
+  border: 3px solid #ffffff; /* creates padding around scroll thumb */
+
+  background-color: rgb(255, 255, 255); /* color of the scroll thumb */
 }
 
 @media (min-width: 1000px) {
@@ -57,34 +93,4 @@ body {
   body {
     font-size: 40px;
   }
-}
-
-body {
-  position: relative;
-
-  display: flex;
-  width: 100vw;
-  margin: 0;
-  color: #fff;
-  background-color: #1c1c1c;
-  font-family: "Ubuntu", "Anek Telugu", "Open Sans";
-  overflow-x: hidden;
-}
-
-body::-webkit-scrollbar {
-  width: 0.5rem;
-}
-
-body::-webkit-scrollbar-track {
-  background-color: black;
-}
-
-body::-webkit-scrollbar-thumb {
-  background-color: rgb(255, 255, 255); /* color of the scroll thumb */
-  border-radius: 5px; /* roundness of the scroll thumb */
-  border: 3px solid #ffffff; /* creates padding around scroll thumb */
-}
-
-a {
-  text-decoration: none;
 }

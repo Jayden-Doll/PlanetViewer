@@ -1,6 +1,4 @@
 import { useContext } from "react";
-import { PlanetContext } from "../../contexts/planet.context";
-
 import { library } from "@fortawesome/fontawesome-svg-core";
 import {
   faGithub,
@@ -8,6 +6,8 @@ import {
   faTwitter,
   faInstagram,
 } from "@fortawesome/free-brands-svg-icons";
+
+import { PlanetContext } from "../../contexts/planet.context";
 
 import {
   FooterContainer,

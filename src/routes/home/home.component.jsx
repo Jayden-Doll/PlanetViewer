@@ -1,8 +1,8 @@
 import { useEffect, useContext, useState } from "react";
+
 import { PlanetContext } from "../../contexts/planet.context";
 import MobileMenu from "../../components/mobile-menu/mobile-menu.component";
 import SolarSystemMap from "../../components/solar-system-map/solar-system-map.component";
-
 import AnimatedPage from "../../components/animated-page/animatedpage.component";
 
 import { SolarSystem, SolarSystemContainer, HomeWrapper } from "./home.styles";

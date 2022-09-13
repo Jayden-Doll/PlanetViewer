@@ -1,12 +1,13 @@
 import styled from "styled-components";
 
 export const MenuItemsContainer = styled.div`
-  width: 100%;
-  height: auto;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+
+  width: 100%;
+  height: auto;
 `;
 
 export const ItemContainer = styled.div`
@@ -14,21 +15,24 @@ export const ItemContainer = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  display: flex;
 
   :hover {
-    background-color: #262626;
     cursor: pointer;
+
+    background-color: #262626;
   }
 `;
 
 export const MenuItem = styled.div`
-  width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 1rem;
+
+  width: 100%;
+
   padding: 1.5rem 0;
+
   color: #fff;
 `;
 
