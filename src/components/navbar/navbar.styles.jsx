@@ -13,7 +13,7 @@ export const NavContainer = styled.div`
   right: 0;
   z-index: 2;
 
-  background-color: #1c1c1c;
+  background-color: #141414;
   border-bottom: 1px solid #fff;
   ${({ planetAccent }) =>
     `border-bottom: 1px solid #${planetAccent} !important`};
@@ -23,6 +23,7 @@ export const NavContainer = styled.div`
 
   @media (max-width: 580px) {
     height: 6rem;
+    justify-content: center;
   }
 `;
 

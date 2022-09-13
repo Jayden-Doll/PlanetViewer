@@ -146,6 +146,11 @@ export const BackButton = styled(Link)`
 
     background-color: #fff;
   }
+
+  @media (max-width: 580px) {
+    font-size: 1.1rem;
+    padding: 0.7rem 0.8rem;
+  }
 `;
 
 export const PlanetContainer = styled(motion.div)`

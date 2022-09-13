@@ -12,7 +12,7 @@ export const FooterContainer = styled.footer`
   bottom: 0;
   z-index: 2;
 
-  background-color: #1c1c1c;
+  background-color: #141414;
   border-top: 0.5px solid #fff;
   ${({ planetAccent }) =>
     `border-top: 0.5px solid #${planetAccent} !important`};
