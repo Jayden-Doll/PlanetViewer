@@ -71,6 +71,7 @@ export const PlanetTitle = styled.h1`
 export const PlanetType = styled.p`
   margin-top: 0;
   margin-bottom: 0.5rem;
+  padding-top: 1rem;
 
   font-size: 1.2rem;
 `;
