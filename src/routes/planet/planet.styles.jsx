@@ -26,7 +26,7 @@ export const Container = styled.div`
   width: 100vw;
   height: 100%;
 
-  padding: 2rem 0;
+  padding: 1.1rem 0;
 `;
 
 export const InfoContainer = styled(motion.div)`
