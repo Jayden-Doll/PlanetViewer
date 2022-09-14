@@ -27,7 +27,7 @@ const MenuItems = () => {
       </MenuItem>
 
       <MenuItem>
-        <MenuItemLink as={Link} to="/planets/mercury">
+        <MenuItemLink as={Link} to="/planet/mercury">
           <Wrapper>
             <ContentContainer>
               <Icon src={planetIcons.mercury} alt="mercury" />
@@ -38,7 +38,7 @@ const MenuItems = () => {
       </MenuItem>
 
       <MenuItem>
-        <MenuItemLink as={Link} to="/planets/venus">
+        <MenuItemLink as={Link} to="/planet/venus">
           <Wrapper>
             <ContentContainer>
               <Icon src={planetIcons.venus} alt="venus" />
@@ -49,7 +49,7 @@ const MenuItems = () => {
       </MenuItem>
 
       <MenuItem>
-        <MenuItemLink as={Link} to="/planets/earth">
+        <MenuItemLink as={Link} to="/planet/earth">
           <Wrapper>
             <ContentContainer>
               <Icon src={planetIcons.earth} alt="earth" />
@@ -60,7 +60,7 @@ const MenuItems = () => {
       </MenuItem>
 
       <MenuItem>
-        <MenuItemLink as={Link} to="/planets/moon">
+        <MenuItemLink as={Link} to="/planet/moon">
           <Wrapper>
             <ContentContainer>
               <Icon src={planetIcons.moon} alt="moon" />
@@ -71,7 +71,7 @@ const MenuItems = () => {
       </MenuItem>
 
       <MenuItem>
-        <MenuItemLink as={Link} to="/planets/mars">
+        <MenuItemLink as={Link} to="/planet/mars">
           <Wrapper>
             <ContentContainer>
               <Icon src={planetIcons.mars} alt="mars" />
@@ -82,7 +82,7 @@ const MenuItems = () => {
       </MenuItem>
 
       <MenuItem>
-        <MenuItemLink as={Link} to="/planets/jupiter">
+        <MenuItemLink as={Link} to="/planet/jupiter">
           <Wrapper>
             <ContentContainer>
               <Icon src={planetIcons.jupiter} alt="jupiter" />
@@ -93,7 +93,7 @@ const MenuItems = () => {
       </MenuItem>
 
       <MenuItem>
-        <MenuItemLink as={Link} to="/planets/saturn">
+        <MenuItemLink as={Link} to="/planet/saturn">
           <Wrapper>
             <ContentContainer>
               <Icon src={planetIcons.saturn} alt="saturn" />
@@ -104,7 +104,7 @@ const MenuItems = () => {
       </MenuItem>
 
       <MenuItem>
-        <MenuItemLink as={Link} to="/planets/uranus">
+        <MenuItemLink as={Link} to="/planet/uranus">
           <Wrapper>
             <ContentContainer>
               <Icon src={planetIcons.uranus} alt="uranus" />
@@ -115,7 +115,7 @@ const MenuItems = () => {
       </MenuItem>
 
       <MenuItem>
-        <MenuItemLink as={Link} to="/planets/neptune">
+        <MenuItemLink as={Link} to="/planet/neptune">
           <Wrapper>
             <ContentContainer>
               <Icon src={planetIcons.neptune} alt="neptune" />
@@ -126,7 +126,7 @@ const MenuItems = () => {
       </MenuItem>
 
       <MenuItem>
-        <MenuItemLink as={Link} to="/planets/pluto">
+        <MenuItemLink as={Link} to="/planet/pluto">
           <Wrapper>
             <ContentContainer>
               <Icon src={planetIcons.pluto} alt="pluto" />
