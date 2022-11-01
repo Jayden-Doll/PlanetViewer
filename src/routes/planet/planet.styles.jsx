@@ -133,7 +133,7 @@ export const BackButton = styled(Link)`
 
   background-color: #d4d4d4;
   color: #1c1c1c;
-  border-radius: 0.4rem;
+  border-radius: 0.1rem;
   border: none;
 
   font-family: "Ubuntu";
